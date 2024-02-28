@@ -8,10 +8,14 @@
 body{
     background-color: #E9ECF8;
     font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .decodificador{
     display: flex;
+    align-content: center;
     gap: 80px;
 }
 
@@ -33,6 +37,7 @@ body{
 }
 
 .decodificador_texto_info{
+    margin-top: 20%;
     padding-left: 240px;
     display: flex;
     align-items:baseline;
@@ -82,11 +87,40 @@ body{
     border-radius: 32px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 400px;
+    height: 944px;
+    gap: 32px;
+}
+
+.decodificador_resultado_texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 336px;
+}
+
+.decodificador_resultado_texto h5{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #343A40;
+    font-weight: 700;
+    text-align: center;
+}
+
+.decodificador_resultado_texto h6{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #495057;
+    font-weight: 400;
+    text-align: center;
 }
 
 .footer{
+    margin-top: 5%;
     background-color: #7092be;
     display: flex;
     justify-content: center;
