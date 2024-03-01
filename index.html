@@ -11,7 +11,7 @@
     <main class="decodificador">
         <section class="decodificador_texto">
             <img src="./Imagens/logo.png" alt="logo" height="48px" width="120px">
-            <textarea placeholder="Digite o código" id="codigo" cols="30" rows="10"></textarea>
+            <textarea placeholder="Digite o código" id="codigo" class="codigo" cols="30" rows="10"></textarea>
             <div class="decodificador_texto_info">
                 <img src="./Imagens/exclamacao.jpeg" alt="exclamacao" width="15px" height="15px">
                 <div>
@@ -19,8 +19,8 @@
                 </div>
             </div>
             <div class="decodificador_botoes">
-                <button class="btn-criptografar">Criptografar</button>
-                <button class="btn-descriptografar">Descriptografar</button>
+                <button class="btn-criptografar" type="button" onclick="criptografar()">Criptografar</button>
+                <button class="btn-descriptografar" type="button" onclick="descriptografar()">Descriptografar</button>
             </div>
         </section>
         <section class="decodificador_resultado">
