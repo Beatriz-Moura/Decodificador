@@ -191,6 +191,9 @@ body{
 }
 
 @media(max-width:375px){
+    .decodificador_texto textarea{
+        width: 343px;
+    }
     .decodificador_botoes{
         flex-direction: column;
     }
