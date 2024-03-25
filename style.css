@@ -10,7 +10,7 @@ body{
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+
 }
 
 .decodificador{
@@ -18,7 +18,6 @@ body{
     align-content: center;
     justify-content: center;
     gap: 80px;
-
 }
 
 .decodificador_texto img{
@@ -74,7 +73,7 @@ body{
     width: 328px;
     border-radius: 24px;
     height: 67px;
-    border-color: #0A3871;
+    border: 1px solid #052051;
 }
 
 .btn-descriptografar{
@@ -86,7 +85,7 @@ body{
     width: 328px;
     border-radius: 24px;
     height: 67px;
-    border-color: #0A3871;
+    border: 1px solid #052051;
 }
 
 .decodificador_resultado{
@@ -152,4 +151,65 @@ body{
 }
 .footer_info a:hover{
     text-decoration: underline;
+}
+
+@media(max-width: 770px){
+    .decodificador{
+        flex-direction: column;
+    }
+    .decodificador_texto{
+        display:flex;
+        flex-direction: column;
+    }
+    .decodificador_texto img{
+        margin-bottom: 18%;
+        padding-top: 3%;
+        padding-left: 0;
+    }
+    .decodificador_texto textarea{
+        margin-left: 3%;
+        width: 688px;
+    }
+    .decodificador_texto_info{
+        padding-left: 3%;
+        height: 60px;
+    }
+    .decodificador_botoes{
+        padding-left: 3%;
+    }
+    .decodificador_resultado{
+        width: 688px;
+        height: 133px;
+        margin-left: 5%;
+    }
+    .decodificador_resultado img{
+        display: none;
+    }
+    .decodificador_resultado_texto{
+        width: 688px;
+    }
+}
+
+@media(max-width:375px){
+    .decodificador_botoes{
+        flex-direction: column;
+    }
+    .decodificador_resultado{
+        width: 327px;
+    }
+    .decodificador_resultado h5{
+        width: 327px;
+    }
+    .decodificador_resultado h6{
+        width: 327px;
+    }
+    .footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        justify-content: left;
+    }
+    .footer img{
+        display: none;
+    }
 }
