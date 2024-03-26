@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"');
 
+:root{
+    --cor-primaria: #052051;
+    --cor-secundaria: #E9ECF8;
+    --cor-terciaria: #FFFFFF;
+    --cor-info-menor: #495057;
+    --cor-info-maior: #343A40;
+    --cor-botao: #0A3871;
+    --cor-botao-secudaria: #D8DFE8;
+    --cor-footer: #7092be;
+
+    --fonte-primaria: 'Inter', sans-serif;
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 
 body{
-    background-color: #E9ECF8;
-    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
     display: flex;
     flex-direction: column;
 
@@ -26,16 +39,17 @@ body{
 }
 .decodificador_texto textarea{
     margin-left: 240px;
-    background-color: #E9ECF8;
+    background-color: var(--cor-secundaria);
     border: none;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 32px;
     resize: none;
-    color: #052051;
+    color: var(--cor-primaria);
+    text-transform:lowercase;
 }
 
 .decodificador_texto textarea::placeholder{
-    color: #052051;
+    color: var(--cor-primaria);
 }
 
 .decodificador_texto textarea:focus, textarea:active{
@@ -52,8 +66,8 @@ body{
 }
 
 .decodificador_texto_info h6{
-    color: #495057;
-    font-family: 'Inter', sans-serif;
+    color: var(--cor-info-menor);
+    font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 12px;
 }
@@ -65,32 +79,32 @@ body{
 }
 
 .btn-criptografar{
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 16px;
     text-align: center;
-    background-color: #0A3871;
-    color: #FFFFFF;
+    background-color: var(--cor-botao);
+    color: var(--cor-terciaria);
     width: 328px;
     border-radius: 24px;
     height: 67px;
-    border: 1px solid #052051;
+    border: 1px solid var(--cor-primaria);
 }
 
 .btn-descriptografar{
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 16px;
     text-align: center;
-    background-color: #D8DFE8;
-    color: #0A3871;
+    background-color: var(--cor-botao-secudaria);
+    color: var(--cor-botao);
     width: 328px;
     border-radius: 24px;
     height: 67px;
-    border: 1px solid #052051;
+    border: 1px solid var(--cor-primaria);
 }
 
 .decodificador_resultado{
     margin-top: 40px;
-    background-color: #FFFFFF;
+    background-color: var(--cor-terciaria);
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     display: flex;
@@ -112,28 +126,58 @@ body{
 }
 
 .decodificador_resultado_texto h5{
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 24px;
-    color: #343A40;
+    color: var(--cor-info-maior);
     font-weight: 700;
     text-align: center;
 }
 
 .decodificador_resultado_texto h6{
-    font-family: 'Inter', sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 16px;
-    color: #495057;
+    color: var(--cor-info-menor);
     font-weight: 400;
     text-align: center;
 }
 
+.codigo_resultado{
+    background-color: var(--cor-terciaria);
+    border: none;
+    font-family: var(--fonte-primaria);
+    font-size: 32px;
+    resize: none;
+    color: var(--cor-primaria);
+    text-transform:lowercase;
+    height: 70%;
+    width: 80%;
+}
+
+.codigo_resultado textarea:focus, textarea:active{
+    border: none;
+    outline: none;
+}
+
+.btn-copiar{
+    margin-top: 15%;
+    font-family: var(--fonte-primaria);
+    font-size: 16px;
+    text-align: center;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-botao);
+    width: 328px;
+    border-radius: 24px;
+    height: 67px;
+    border: 1px solid var(--cor-primaria);
+}
+
 .footer{
     margin-top: 5%;
-    background-color: #7092be;
+    background-color: var(--cor-footer);
     display: flex;
     justify-content: center;
     gap: 50px;
-    color: #052051;
+    color: var(--cor-primaria);
 }
 
 .footer_info{
@@ -147,7 +191,7 @@ body{
 
 .footer_info a{
     text-decoration: none;
-    color: #052051;
+    color: var(--cor-primaria);
 }
 .footer_info a:hover{
     text-decoration: underline;
@@ -213,6 +257,10 @@ body{
         justify-content: left;
     }
     .footer img{
+        display: none;
+    }
+
+    .invisivel{
         display: none;
     }
 }
